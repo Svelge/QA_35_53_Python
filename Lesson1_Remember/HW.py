@@ -1,5 +1,5 @@
 def print_substring_reverse(s,start,finish):
-    if s is None or s.strip()=="":
+    if s is None or s.strip()=="": #strip обрезает все невидимые символы (пробелы, табы, переносы строк) по краям строки: в самом начале и в самом конце. При этом то, что находится внутри текста, он не трогает.
         print("Wrong args")
         return
     if start<0 or finish>=len(s) or start>finish:
@@ -17,7 +17,7 @@ print_substring_reverse("hi",3,1)
 def get_words_reverse(s):
     words = s.split()
     reversed_words = words[::-1]
-    return "".join(reversed_words)
+    return "".join(reversed_words) #склеивает в строку и добавляет пробел
 
 print()
 print(get_words_reverse("Hello my nice world"))
