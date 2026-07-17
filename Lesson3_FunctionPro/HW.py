@@ -21,7 +21,7 @@ def sum_even_numbers(*numbers):
         x = 0
         for a in numbers:
             if a%2==0:
-                x = x+a
+                x += a
         return x
 print(sum_even_numbers(1, 2, 3, 4, 5, 6))
 print(sum_even_numbers(7, 9))
@@ -37,6 +37,7 @@ def print_pet_info(name,**info):
     else:
         for key, value in info.items():
             print(f"{key}: {value}")
+
 print_pet_info(
     "Lucky",
     age=4,
@@ -46,7 +47,31 @@ print_pet_info(
 print()
 print_pet_info("Lucky")
 
+#4 Advanced
+print()
 
+print('#4\n')
+
+def merge_list(*lists):
+    result = []
+    for current_list in lists:
+        for item in current_list:
+            result.append(item) #append добавляет в result каждый следующий элемент item
+    return result
+
+print(merge_list([1, 2],
+[3],
+[4, 5],
+[]
+))
+
+print()
+
+print('#5\n')
+
+def build_message(*words,separator=""):
+    return separator.join(words) #join склеивает все элементы в одну строчку через указанный разделитель
+print(build_message("Hello","it",'is','me',separator=" "))
 
 
 
