@@ -1,0 +1,3 @@
+Hello, automated tests!
+Second line
+Testing Append
