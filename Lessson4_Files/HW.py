@@ -53,6 +53,22 @@ def save_profile(name,age,city):
 
 save_profile("Alex", 31, "Tel aviv")
 
+print()
+
+print("#4")
+
+from pathlib import Path
+
+def create_reports_folder():
+    reports_dir = Path("reports_1")
+    reports_dir.mkdir(exist_ok=True) #mkdir = make directory
+    result_file= reports_dir/"result.txt"
+    with open(result_file,'w',encoding='utf-8') as file:
+        file.write("Homework completed successfully")
+
+create_reports_folder()
+
+
 
 
 
