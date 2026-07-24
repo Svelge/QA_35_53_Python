@@ -71,4 +71,27 @@ read_number()
 
 print()
 
+def validate_age(age):
+    if age<0:
+        raise ValueError("Age cannot be negative") #raise сам бросает ошибку
+    if age>120:
+        raise ValueError("Age is not realistic")
 
+# validate_age(25)
+# validate_age(-5)
+# validate_age(165)
+
+try:
+    validate_age(25)
+except ValueError as error:
+    print(error)
+
+try:
+    print(validate_age(-5))
+except ValueError as error:
+    print(error)
+
+try:
+    print(validate_age(165))
+except ValueError as error:
+    print(error)
